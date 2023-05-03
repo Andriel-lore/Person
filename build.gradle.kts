@@ -1,6 +1,6 @@
 plugins {
     kotlin("jvm") version "1.8.20"
-    application
+    `java-library`
     `maven-publish`
 }
 
@@ -8,6 +8,11 @@ group = "com.andriel"
 version = "person"
 
 publishing {
+    repositories {
+        maven {
+            url = uri("file://${buildDir.absolutePath}/maven")
+        }
+    }
     publications {
         create<MavenPublication>("maven") {
             groupId ="com.andriel"
@@ -36,6 +41,3 @@ kotlin {
     jvmToolchain(11)
 }
 
-application {
-    mainClass.set("MainKt")
-}
