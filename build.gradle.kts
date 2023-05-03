@@ -12,7 +12,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId ="com.andriel"
             artifactId = "person"
-            version = "1"
+            version = "2"
 
             from(components["java"])
         }
