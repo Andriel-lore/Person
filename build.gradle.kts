@@ -8,11 +8,7 @@ group = "com.andriel"
 version = "person"
 
 publishing {
-    repositories {
-        maven {
-            url = uri("file://${buildDir.absolutePath}/maven")
-        }
-    }
+
     publications {
         create<MavenPublication>("maven") {
             groupId ="com.andriel"
